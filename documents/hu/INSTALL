@@ -1,0 +1,87 @@
+                              Telepítési utasítás
+                              ~~~~~~~~~~~~~~~~~~~
+1. FreeBSD
+~~~~~~~~~~
+a. Bináris (txz) csomagból
+
+   Használja a csomagkezelőt a telepítéshez/eltávolításhoz.
+
+b. Forrásnyelvű csomagból
+
+   Fordítás és telepítés:
+   # tar -xzf r-circuits-0.4.1.tar.gz
+   # ./configure
+   # make
+   # make install
+
+   Eltávolítás:
+   # make uninstall
+
+2. Linux
+~~~~~~~~
+a. Bináris (deb, package, rpm, txz) csomagból
+
+   Használja a csomagkezelőt a telepítéshez/eltávolításhoz.
+
+b. Bináris (bin) csomagból
+
+   Telepítés:
+   # ./r-circuits-0.4.1-i586.bin
+
+   Eltávolítás:
+   # /opt/r-circuits/uninstall
+
+c. Bináris (tar.gz) csomagból
+
+   Telepítés:
+   # cp r-circuits-0.4.1-i586.tar.gz /opt
+   # cd /opt
+   # tar -xzf r-circuits-0.4.1-i586.tar.gz
+   # cd r-circuits
+   # ./create_links
+            vagy
+   # tar -xzf r-circuits-0.4.1-i586.tar.gz
+   # cd r-circuits
+   # ./install
+
+   Eltávolítás:
+   # /opt/r-circuits/remove_links
+   # rm -r /opt/r-circuits/
+            vagy
+   # /opt/r-circuits/uninstall
+
+d. Forrásnyelvű csomagból
+
+   Fordítás és telepítés:
+   $ tar -xzf r-circuits-0.4.1.tar.gz
+   $ ./configure
+   $ make
+   # make install
+
+   Eltávolítás:
+   # make uninstall
+
+3. Windows
+~~~~~~~~~~
+a. Bináris (exe) csomagból
+
+   Futtassa a telepítőfájl és kövesse az utasításokat.
+
+b. Bináris (msi) csomagból
+
+   > msiexec.exe /i r-circuits-0.4.1-win32.msi  (vagy duplakattintással
+                                                    nyissa meg a csomagot) 
+c. Bináris (zip) csomagból
+
+   > unzip r-circuits-0.4.1-win32.zip           (vagy használjon csomagoló
+                                                    alkalmazást)
+d. Forrásnyelvű csomagból
+
+   Fordítás és telepítés:
+   > tar -xzf r-circuits-0.4.1.tar.gz           (vagy használjon csomagoló
+   > build.bat                                      alkalmazást)
+   > build.bat install
+
+   Eltávolítás:
+   > build.bat uninstall
+

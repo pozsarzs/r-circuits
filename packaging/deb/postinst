@@ -1,0 +1,12 @@
+#!/bin/sh
+set -e
+# Automatically added by dh_installdocs
+if [ "$1" = "configure" ]; then
+  if [ -d /usr/doc -a ! -e /usr/doc/r-circuits -a -d /usr/share/doc/r-circuits ]; then
+    ln -sf /usr/share/doc/r-circuits /usr/doc/r-circuits
+  fi
+fi
+if [ -x update-menus ]; then
+  update-menus
+fi
+# End automatically added section

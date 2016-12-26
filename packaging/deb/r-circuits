@@ -1,0 +1,2 @@
+?package(r-circuits):needs="X11" section="Applications/Science/Electronics"\
+        title="R-circuits" icon="/usr/share/pixmaps/r-circuits.xpm" command="/usr/bin/r-circuits"

@@ -1,0 +1,70 @@
+# +----------------------------------------------------------------------------+
+# | R-circuits v0.4.1 * R-circuit calculator                                   |
+# | Copyright (C) 2011-2016 Pozsar Zsolt <pozsarzs@gmail.com>                  |
+# | default.apspec                                                             |
+# | apspec file for autopackage                                                |
+# +----------------------------------------------------------------------------+
+
+[Meta]
+RootName: @pozsarzs.hu/r-circuits:$SOFTWAREVERSION
+DisplayName: R-circuit calculator
+ShortName: r-circuits
+Maintainer: Pozsar Zsolt <pozsarzs@gmail.com>
+Packager: Pozsar Zsolt <pozsarzs@gmail.com>
+Summary: R-circuit calculator
+URL: http://www.pozsarzs.hu/cheapapps/cheapapps_en.html
+License: EUPL v1.1
+SoftwareVersion: 0.4.1
+Repository: http://www.pozsarzs.hu/cheapapps/r-circuits.xml
+AutopackageTarget: 1.0
+
+[BuildPrepare]
+# documents
+echo $build_root
+mkdir --parent $build_root/share/r-circuits/documents/hu
+cp $source_dir/documents/* $build_root/share/r-circuits/documents/
+cp $source_dir/documents/hu/* $build_root/share/r-circuits/documents/hu/
+# figures
+mkdir --parent $build_root/share/r-circuits/figures
+cp $source_dir/figures/* $build_root/share/r-circuits/figures/
+# help
+cp $source_dir/help/*.html $build_root/share/r-circuits/help/
+cp $source_dir/help/*.css $build_root/share/r-circuits/help/
+# locales
+mkdir --parent $build_root/share/r-circuits/languages/hu
+cp $source_dir/languages/* $build_root/share/r-circuits/languages/
+cp $source_dir/languages/hu/* $build_root/share/r-circuits/languages/hu/
+# manuals
+mkdir --parent $build_root/share/r-circuits/manual
+cp $source_dir/manual/* $build_root/share/r-circuits/manual/
+# other files
+cp $source_dir/r-circuits $build_root/share/r-circuits/
+cp $source_dir/README $build_root/share/r-circuits/README
+mkdir --parent $build_root/share/application/
+cp $source_dir/r-circuits.desktop $build_root/share/application/
+mkdir --parent $build_root/share/pixmaps/
+cp $source_dir/r-circuits.xpm $build_root/share/pixmaps/
+
+[BuildUnprepare]
+unprepareBuild
+
+[Imports]
+echo 'share/' | import
+
+[Prepare]
+# Dependency checking
+require @xfree86.org/xlib 6.0
+
+[Install]
+installData share/r-circuits
+outputStatus "$intl_INSTALLING_EXE"
+linkFile --silent $PREFIX/share/r-circuits/r-circuits $PREFIX/bin/r-circuits
+linkFile --silent $PREFIX/share/r-circuits/manual/r-circuits_en.1 $PREFIX/share/man/man1/r-circuits.1
+linkFile --silent $PREFIX/share/r-circuits/manual/r-circuits_hu.1 $PREFIX/share/man/hu/man1/r-circuits.1
+installDesktop "Application/Electronics" share/application/r-circuits.desktop
+installIcon share/pixmaps/r-circuits.xpm
+
+[Uninstall]
+# Usually just the following line is enough to uninstall everything
+uninstallFromLog
+

@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Resistor circuits
+Exec=r-circuits
+Icon=r-circuits.xpm
+Comment=Resistor circuit calculator
+Comment[hu]=Ellenállás áramkörök méretezése
+Type=Application
+Categories=Application;Electronics;
+Terminal=false
+StartupNotify=true
