@@ -44,7 +44,7 @@ const
   CFN=APPNAME+'.ini';
   HFN=APPNAME+'.his';
  {$IFDEF UNIX}
-  {$I config.inc}
+  { I config.inc}
  {$ENDIF}
  {$IFDEF WIN32}
   CSIDL_PROFILE=40;

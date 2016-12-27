@@ -60,7 +60,6 @@
       <Unit0>
         <Filename Value="r-circuits.lpr"/>
         <IsPartOfProject Value="True"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="0"/>
         <WindowIndex Value="0"/>
         <TopLine Value="1"/>
@@ -103,10 +102,11 @@
         <Filename Value="untcommonproc.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="untcommonproc"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="5"/>
         <WindowIndex Value="0"/>
-        <TopLine Value="1"/>
-        <CursorPos X="1" Y="7"/>
+        <TopLine Value="33"/>
+        <CursorPos X="5" Y="47"/>
         <UsageCount Value="173"/>
         <Loaded Value="True"/>
       </Unit3>
